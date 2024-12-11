@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
     <title>blog</title>
 </head>
 <body>
@@ -14,8 +16,12 @@
             <li>
                 <p>source: <a href="https://news.ycombinator.com/item?id=35164819" target="_blank">news.ycombinator.com/item?id=35164819</a></p>
                 <p>post from user 'pwim' on harckernews:</p>
-                <img src="images/dec-11-2024/japan_blog.png" alt="screenshot of the post" class="responsive-img">
+                <img src="images/dec-11-2024/japan_blog.png" alt="screenshot of the post" class="responsive-img" onclick="openLightbox(this)">
                 <p>here's his site: <a href="https://www.tokyodev.com/" target="_blank">www.tokyodev.com</a></p>
+            </li>
+            <li>
+                <p>source: <a href="https://dictionary.cambridge.org/us/dictionary/english/spelunker" target="_blank">dictionary.cambridge.org/us/dictionary/english/spelunker</a></p>
+                <p>the meaning of the word spelunker.</p>
             </li>
         </ul>
     </section>
@@ -26,7 +32,7 @@
             <li>
                 <p>source: <a href="https://x.com/cb_doge/status/1866565984502550905" target="_blank">x.com/cb_doge/status/1866565984502550905</a></p>
                 <p>bullish on america:</p>
-                <img src="images/dec-10-2024/bullish-on-america.png" alt="image of Trump's post" class="responsive-img">
+                <img src="images/dec-10-2024/bullish-on-america.png" alt="image of Trump's post" class="responsive-img" onclick="openLightbox(this)">
             </li>
         </ul>
     </section>
@@ -37,7 +43,7 @@
             <li>
                 <p>source: <a href="https://x.com/cb_doge/status/1866565984502550905" target="_blank">x.com/cb_doge/status/1866565984502550905</a></p>
                 <p>bullish on america:</p>
-                <img src="images/dec-10-2024/bullish-on-america.png" alt="image of Trump's post" class="responsive-img">
+                <img src="images/dec-10-2024/bullish-on-america.png" alt="image of Trump's post" class="responsive-img" onclick="openLightbox(this)">
             </li>
 
             <li>
@@ -48,27 +54,18 @@
                     <a href="https://x.com/levelsio/status/1865952213643772206" target="_blank">x.com/levelsio/status/1865952213643772206</a>
                 </p>
                 <div class="image-gallery">
-                    <img src="images/dec-09-2024/a16z.png" alt="a16z's big ideas in tech for 2025" class="responsive-img">
-                    <img src="images/dec-09-2024/yc.png" alt="yc's request for startups" class="responsive-img">
-                    <img src="images/dec-09-2024/overlaps.png" alt="overlaps-by-chatgpt" class="responsive-img">
+                    <img src="images/dec-09-2024/a16z.png" alt="a16z's big ideas in tech for 2025" class="responsive-img" onclick="openLightbox(this)">
+                    <img src="images/dec-09-2024/yc.png" alt="yc's request for startups" class="responsive-img" onclick="openLightbox(this)">
+                    <img src="images/dec-09-2024/overlaps.png" alt="overlaps-by-chatgpt" class="responsive-img" onclick="openLightbox(this)">
                 </div>
             </li>
         </ul>
     </section>
 
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()">x</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
 </body>
-
-<style>
-    .responsive-img {
-        max-width: 50%;
-        height: auto;
-    }
-
-    .image-gallery {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-</style>
 
 </html>
