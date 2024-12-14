@@ -1,13 +1,3 @@
-// Function to dynamically load content from JSON
-async function loadContent() {
-    const response = await fetch('data.json'); // Fetch the JSON file
-    const jsonData = await response.json(); // Parse the JSON data
-
-    const contentDiv = document.getElementById('content'); // Target container
-
-    
-}
-
 // Function to open the lightbox and display the clicked image
 function openLightbox(img) {
     const lightbox = document.getElementById('lightbox');
@@ -31,6 +21,3 @@ document.getElementById('lightbox').addEventListener('click', function(event) {
         closeLightbox();
     }
 });
-
-// Load content on page load
-document.addEventListener('DOMContentLoaded', loadContent)

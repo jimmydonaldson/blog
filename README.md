@@ -1,2 +1,0 @@
-# blog
-sharing interesting stuff
